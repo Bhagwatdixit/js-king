@@ -1,13 +1,20 @@
 const apikey = "a6752c33dedca4278d4b0126162618d6";
+// sabse pahle ek variable lenge usmain api store krnge (apikey) mtlb login krne ke baad api milna 
 
 const weatherDataEl = document.querySelector("#weather-data");
 const cityInputEl = document.querySelector("#city-input");
 const formEl = document.querySelector("form");
+// fr sab html ki id or class ka refernce lunga
 
 formEl.addEventListener("submit", async (event) => {
+    // yahan form pe ek event lagynge jab submit button dabynge tab jo async function ke andar jo code likha hai wo excecute hoga
+
     event.preventDefault();
+    // ye line hai jab form submit kre to wo refresh na ho bar bar
     const cityValue = cityInputEl.value;
+    // jab koi input dalega to wo value cityValue variable main store ho jayegi
     await getWeatherData(cityValue);
+    // ye function wait krega jab tak weatherdata wala function pura na chl jaye or wo answer wapas return na kr de
 });
 
 async function getWeatherData(cityValue) {
