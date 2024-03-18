@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.uppedside{
+
+}
+.circle{
+    background-color: green;
+    display: block;
+
+}
+.lower-side{
+    background-color: aqua;
+}
+
